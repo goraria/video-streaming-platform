@@ -4,13 +4,14 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "pull": "pnpm install",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
-    "gorth": "pnpm update gorth-ui gorth-base"
+    "postinstall": "pnpm update gorth-ui gorth-base"
   },
   "dependencies": {
     "gorth-ui": "github:goraria/gorth-ui",
