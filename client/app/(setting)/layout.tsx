@@ -11,7 +11,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "gorth-ui/default/tooltip"
-import { Dashbar } from "gorth-ui/layouts/dashbar"
+import { Dashbar } from "@/layouts/dashbar"
 import { Copyright } from "gorth-ui/layouts/copyright"
 import { AppSidebar } from "gorth-ui/dashboard/app-sidebar"
 import {
@@ -183,16 +183,7 @@ export default function SettingLayout({ children }: Readonly<{ children: React.R
       <AppSidebar data={data} />
 
       <SidebarInset>
-        <Dashbar>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <SidebarTrigger className="size-9 rounded-md" />
-            </TooltipTrigger>
-            <TooltipContent side="left">
-              <p>Add to library</p>
-            </TooltipContent>
-          </Tooltip>
-        </Dashbar>
+        <Dashbar/>
         {children}
         <Copyright />
       </SidebarInset>
