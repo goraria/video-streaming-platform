@@ -11,7 +11,7 @@
     "lint": "eslint",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
-    "postinstall": "pnpm update gorth-ui gorth-base"
+    "gorth": "pnpm update gorth-ui gorth-base"
   },
   "dependencies": {
     "gorth-ui": "github:goraria/gorth-ui",
