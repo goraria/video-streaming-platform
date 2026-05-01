@@ -1,0 +1,7 @@
+packages:
+  - "client"
+  - "server"
+
+onlyBuiltDependencies:
+  - "gorth-ui"
+  - "gorth-base"
