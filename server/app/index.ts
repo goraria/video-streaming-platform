@@ -18,7 +18,7 @@ import pc from 'picocolors'
 import fs from 'fs';
 import { Logger } from "gorth-base/lib/logger";
 import http, { createServer } from "http";
-import { WebSocketServer } from "ws";
+// import { WebSocketServer } from "ws";
 import { createRealtime } from "@/lib/supabase/realtime";
 // import { prisma } from "@/lib/prisma";
 

@@ -1,5 +1,5 @@
 // import { Prisma } from "@prisma/client/index";
-import { prisma } from "@/lib/prisma";
+// import { prisma } from "@/lib/prisma";
 import { AuthProvider } from "@/lib/interfaces"
 
 // Helper function to format date without moment
@@ -201,70 +201,70 @@ export function buildAppMetadataFromDB(params: {
   };
 }
 
-export async function getUserOrgRestaurant(userId: string) {
-  const userRelations = await prisma.user.findUnique({
-    where: { id: userId },
-    select: {
-      organizationsOwned: {
-        select: { id: true, name: true, logoUrl: true },
-      },
-      organizationMemberships: {
-        select: {
-          organization: { select: { id: true, name: true, logoUrl: true } },
-        },
-      },
-      restaurantsManaged: {
-        select: { id: true, name: true, logoUrl: true },
-      },
-      restaurantStaffRoles: {
-        select: {
-          restaurant: { select: { id: true, name: true, logoUrl: true } },
-        },
-      },
-    },
-  });
-
-  const organization =
-    userRelations?.organizationsOwned?.[0] ??
-    userRelations?.organizationMemberships?.[0]?.organization ??
-    null;
-  const restaurant =
-    userRelations?.restaurantsManaged?.[0] ??
-    userRelations?.restaurantStaffRoles?.[0]?.restaurant ??
-    null;
-
-  let supplier = null as { id: string; name: string } | null;
-
-  if (organization?.id) {
-    supplier =
-      (await prisma.supplier.findFirst({
-        where: {
-          organizationId: organization.id,
-          deletedAt: null,
-          status: "active",
-          createdById: userId,
-        },
-        select: { id: true, name: true },
-        orderBy: { createdAt: "asc" },
-      })) ??
-      (await prisma.supplier.findFirst({
-        where: {
-          organizationId: organization.id,
-          deletedAt: null,
-          status: "active",
-        },
-        select: { id: true, name: true },
-        orderBy: { createdAt: "asc" },
-      })) ??
-      (await prisma.supplier.findFirst({
-        where: {
-          organizationId: organization.id,
-          deletedAt: null,
-        },
-        select: { id: true, name: true },
-        orderBy: { createdAt: "asc" },
-      }));
-  }
-
-  return { organization, restaurant, supplier };
-}
+// export async function getUserOrgRestaurant(userId: string) {
+//   const userRelations = await prisma.user.findUnique({
+//     where: { id: userId },
+//     select: {
+//       organizationsOwned: {
+//         select: { id: true, name: true, logoUrl: true },
+//       },
+//       organizationMemberships: {
+//         select: {
+//           organization: { select: { id: true, name: true, logoUrl: true } },
+//         },
+//       },
+//       restaurantsManaged: {
+//         select: { id: true, name: true, logoUrl: true },
+//       },
+//       restaurantStaffRoles: {
+//         select: {
+//           restaurant: { select: { id: true, name: true, logoUrl: true } },
+//         },
+//       },
+//     },
+//   });
+//
+//   const organization =
+//     userRelations?.organizationsOwned?.[0] ??
+//     userRelations?.organizationMemberships?.[0]?.organization ??
+//     null;
+//   const restaurant =
+//     userRelations?.restaurantsManaged?.[0] ??
+//     userRelations?.restaurantStaffRoles?.[0]?.restaurant ??
+//     null;
+//
+//   let supplier = null as { id: string; name: string } | null;
+//
+//   if (organization?.id) {
+//     supplier =
+//       (await prisma.supplier.findFirst({
+//         where: {
+//           organizationId: organization.id,
+//           deletedAt: null,
+//           status: "active",
+//           createdById: userId,
+//         },
+//         select: { id: true, name: true },
+//         orderBy: { createdAt: "asc" },
+//       })) ??
+//       (await prisma.supplier.findFirst({
+//         where: {
+//           organizationId: organization.id,
+//           deletedAt: null,
+//           status: "active",
+//         },
+//         select: { id: true, name: true },
+//         orderBy: { createdAt: "asc" },
+//       })) ??
+//       (await prisma.supplier.findFirst({
+//         where: {
+//           organizationId: organization.id,
+//           deletedAt: null,
+//         },
+//         select: { id: true, name: true },
+//         orderBy: { createdAt: "asc" },
+//       }));
+//   }
+//
+//   return { organization, restaurant, supplier };
+// }

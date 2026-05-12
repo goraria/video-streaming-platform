@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "app/main.ts",
   "type": "module",
@@ -20,7 +20,7 @@
     "env": "ts-node -r dotenv/config -r tsconfig-paths/register app/index.ts",
     "genalias": "prisma generate && pnpm run alias",
     "postinstallx": "tsc && tsc-alias && prisma generate",
-    "postbuild": "prisma generate",
+    "postbuildx": "prisma generate",
     "generated": "cp -R prisma/generated .express/prisma/generated",
     "watch": "nodemon --watch './**/*.ts' --exec 'ts-node' app/index.ts",
     "pack": "nodemon -r tsconfig-paths/register app/index.ts",
