@@ -1,0 +1,49 @@
+=== SUPABASE ACCESS TOKEN STRUCTURE ===
+{
+  "header": {
+    "alg": "HS256",
+    "typ": "JWT",
+    "kid": "supabase-key-id"
+  },
+  "payload": {
+    "aud": "authenticated",
+    "exp": 1761938655,
+    "iat": 1761935055,
+    "iss": "https://your-project.supabase.co/auth/v1",
+    "sub": "user-uuid-here",
+    "email": "user@example.com",
+    "phone": "",
+    "app_metadata": {
+      "provider": "email",
+      "providers": [
+        "email"
+      ]
+    },
+    "user_metadata": {
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    "role": "authenticated",
+    "aal": "aal1",
+    "amr": [
+      {
+        "method": "password",
+        "timestamp": 1761935055
+      }
+    ],
+    "session_id": "session-uuid-here",
+    "is_anonymous": false
+  }
+}
+
+=== SUPABASE REFRESH TOKEN STRUCTURE ===
+{
+  "type": "opaque_token",
+  "description": "Refresh token is an opaque string (not JWT)",
+  "format": "random-secure-string",
+  "length": "43-100 characters",
+  "example": "v2_AbCdEfGhIjKlMnOpQrStUvWxYz0123456789-_AbCdEfGh",
+  "usage": "Used to obtain new access_token when expired",
+  "storage": "Stored in httpOnly cookie for security",
+  "lifetime": "30 days (configurable in Supabase)"
+}

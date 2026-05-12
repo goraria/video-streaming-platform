@@ -1,0 +1,24 @@
+{
+  "watch": ["app", "lib", "routes", "controllers", "services", "middlewares", "schemas"],
+  "ext": "ts,json",
+  "ignore": ["node_modules", "build", ".express", "*.test.ts", "*.spec.ts", "prisma/migrations", "public"],
+  "exec": "tsx app/main.ts",
+  "quiet": true,
+  "verbose": false,
+  "colours": true,
+  "restartable": "rs",
+  "delay": 50,
+  "signal": "SIGTERM",
+  "killTimeout": 2000,
+  "env": {
+    "NODE_ENV": "development",
+    "FORCE_COLOR": "1"
+  },
+  "events": {
+    "start": "if [ ! -f .express/.started ]; then echo '▼ Express.js 5.2.1 (Nodemon)\n- Local:        http://localhost:8080\n- Network:      http://192.168.1.1:8080\n- Environments: .env.local\n\n✓ Starting...' && mkdir -p .express && touch .express/.started; else echo '✓ Compiling...'; fi",
+    "restart": "",
+    "crash": "",
+    "exit": "",
+    "quit": "rm -f .express/.started || true"
+  }
+}

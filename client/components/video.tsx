@@ -2,44 +2,30 @@ import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { cn } from "gorth-ui/lib/utils"
-import { Avatar, AvatarFallback, AvatarImage } from "gorth-ui/default/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "gorth-ui/custom/avatar"
 import { Badge } from "gorth-ui/custom/badge"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "gorth-ui/default/tooltip"
+import { Channel, Video } from "@/lib/interface"
 
 export type VideoLayout = "below" | "overlay" | "side"
 export type VideoSize = "sm" | "md" | "lg" | "auto"
 export type MetadataPosition = "below" | "left" | "right" | "top"
 
-export interface ChannelInfo {
-  name?: string
-  slug?: string
-  avatar?: string
-}
-
-export interface VideoInfo {
-  id: string | undefined
-  thumbnail: string
-  title: string
-  duration?: string
-  publishedAt?: string
-  description?: string
-}
-
 export interface VideoProps
   extends Omit<React.ComponentProps<"article">, "title"> {
-  video?: VideoInfo
-  channel?: ChannelInfo
+  video?: Video
+  channel?: Channel
   layout?: VideoLayout
   size?: VideoSize
   metadataPosition?: MetadataPosition
   contentClassName?: string
 }
 
-export function Video({
+export function VideoPlaceHolder({
   video,
   channel,
   layout = "below",
@@ -60,7 +46,7 @@ export function Video({
 
   const {
     name: channelName = "Gorth Studio",
-    slug: channelSlug = "gorth-studio",
+    handle: channelSlug = "gorth-studio",
     avatar: channelAvatar,
   } = channel ?? {}
 
@@ -131,7 +117,7 @@ export function Video({
     const belowMetadata = (
       <>
         <VideoDetail
-          channel={{ name: channelName, slug: channelSlug, avatar: channelAvatar }}
+          channel={{ name: channelName, handle: channelSlug, avatar: channelAvatar }}
           video={{ id: videoId, thumbnail: thumbnail, title: title, publishedAt: publishedAt, duration: duration, description: description }}
         />
       </>
@@ -172,23 +158,10 @@ export function Video({
   )
 }
 
-export function VideoDetail({ channel, video }: { channel: ChannelInfo, video: VideoInfo }) {
-  const channelName = channel.name ?? "Channel"
+export function VideoDetail({ channel, video }: { channel: Channel, video: Video }) {
   return (
     <div className="flex items-start gap-2">
-      <Link
-        href={`/channel/@${channel.slug ?? ""}`}
-        className="shrink-0 hover:opacity-80 transition-opacity"
-        aria-label={typeof channelName === "string" ? channelName : "Channel"}
-      >
-        <Avatar className="rounded-md size-9">
-          {channel.avatar ? (
-            <AvatarImage src={channel.avatar} alt={"Channel"} className="rounded-md" />
-          ) : (
-            <AvatarFallback className="rounded-md">{"CN"}</AvatarFallback>
-          )}
-        </Avatar>
-      </Link>
+      <VideoAvatar channel={channel}/>
       <div className="grid flex-1 text-left leading-tight">
         <Tooltip>
           <TooltipTrigger asChild>
@@ -203,10 +176,10 @@ export function VideoDetail({ channel, video }: { channel: ChannelInfo, video: V
           </TooltipContent>
         </Tooltip>
         <Link
-          href={`/channel/@${channel.slug ?? ""}`}
+          href={`/channel/${channel.handle ?? ""}`}
           className="truncate text-muted-foreground font-medium text-sm hover:text-foreground"
         >
-          {channelName}
+          {channel.name}
         </Link>
         <span className="truncate text-muted-foreground text-xs" suppressHydrationWarning>
           2M views • {video.publishedAt}
@@ -216,7 +189,28 @@ export function VideoDetail({ channel, video }: { channel: ChannelInfo, video: V
   )
 }
 
-export function VideoThumbnail({ video }: { video: VideoInfo }) {
+export function VideoAvatar({ channel }: { channel: Channel }) {
+  const channelName = channel.name ?? "Channel"
+  return (
+    <>
+      <Link
+        href={`/channel/${channel.handle ?? ""}`}
+        className="shrink-0 hover:opacity-80 transition-opacity"
+        aria-label={typeof channelName === "string" ? channelName : "Channel"}
+      >
+        <Avatar className="">
+          {channel.avatar ? (
+            <AvatarImage src={channel.avatar} alt={"Channel"} className="rounded-md" />
+          ) : (
+            <AvatarFallback className="rounded-md">{"CN"}</AvatarFallback>
+          )}
+        </Avatar>
+      </Link>
+    </>
+  )
+}
+
+export function VideoThumbnail({ video }: { video: Video }) {
   // const imageElement = (
   //   <div className={cn(isSideLayout && imageWidth, maxWidth)}>
   //     <div

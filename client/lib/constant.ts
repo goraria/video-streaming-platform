@@ -21,11 +21,11 @@ import {
 } from "gorth-ui/cores/lucide"
 
 export const mainSidebar = {
-  user: {
-    name: "japtor",
-    email: "japtor@gorth.org",
-    avatar: "/avatar/waddles.jpeg",
-  },
+  // user: {
+  //   name: "japtor",
+  //   email: "japtor@gorth.org",
+  //   avatar: "/avatar/waddles.jpeg",
+  // },
   route: "/",
   role: "main",
   brand: {
@@ -134,3 +134,4 @@ export const mainSidebar = {
     },
   ],
 }
+

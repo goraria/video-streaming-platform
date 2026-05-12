@@ -1,6 +1,9 @@
 "use client"
 
-import { Video } from "@/components/video"
+import { VideoPlaceHolder } from "@/components/video"
+import { Button } from "gorth-ui/custom/button"
+import Link from "next/link"
+import { routes } from "@/lib/environment"
 
 export default function Page() {
   const videos = [
@@ -150,7 +153,7 @@ export default function Page() {
     <div className="flex flex-1 flex-col gap-6 p-4 md:p-6">
       <section className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {videos.map((item) => (
-          <Video
+          <VideoPlaceHolder
             key={item.video.id}
             layout="below"
             size="md"
@@ -159,6 +162,11 @@ export default function Page() {
           />
         ))}
       </section>
+      <Button asChild>
+        <Link href={`/demo`}>
+          Demo
+        </Link>
+      </Button>
     </div>
   )
 }

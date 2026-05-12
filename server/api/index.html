@@ -1,0 +1,1199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./globals.css" />
+    <meta name="next-size-adjust" content="" />
+    <title>Gorthenburg</title>
+    <meta
+      name="description"
+      content="Professional Learning Management System API"
+    />
+    <link rel="icon" href="./favicon.ico" sizes="256x256" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="">
+      <div class="container content">
+        <div class="header-content-main">
+          <div class="logo">
+            <span class="logo-text"> Gorthenburg </span>
+          </div>
+          <button class="btn btn-primary" onclick="toggleTheme()">Dark</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="main-content">
+        <div class="container content main-content-center">
+          <!-- Hero Section -->
+          <div class="hero">
+            <div class="status">✓ API Status: Operational</div>
+            <h1>Restaurant Chain Management System API</h1>
+            <p>
+              A comprehensive API for managing enterprise platforms, users, and
+              order analytics. Built with Node.js and Express.
+            </p>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="cta-buttons">
+            <a href="/docs" class="btn btn-primary">📚 API Documentation</a>
+            <a href="/health" class="btn btn-secondary">Health Check</a>
+          </div>
+
+          <!-- Features Grid -->
+          <div class="sections">
+            <div class="card">
+              <span class="card-icon">👥</span>
+              <h3>User Management</h3>
+              <p>
+                Complete user authentication, authorization, and profile
+                management system.
+              </p>
+            </div>
+            <div class="card">
+              <span class="card-icon">📚</span>
+              <h3>Menu Management</h3>
+              <p>
+                Create, manage, and organize foods with curriculum and
+                materials.
+              </p>
+            </div>
+            <div class="card">
+              <span class="card-icon">📊</span>
+              <h3>Analytics</h3>
+              <p>
+                Track progress, performance metrics, and learning outcomes in
+                real-time.
+              </p>
+            </div>
+            <div class="card">
+              <span class="card-icon">🛒</span>
+              <h3>Order & Payments</h3>
+              <p>
+                Manage orders, payments, and financial transactions securely.
+              </p>
+            </div>
+            <div class="card">
+              <span class="card-icon">🎯</span>
+              <h3>Marketplace</h3>
+              <p>Vendor and course marketplace management with promotions.</p>
+            </div>
+            <div class="card">
+              <span class="card-icon">🔔</span>
+              <h3>Notifications</h3>
+              <p>Real-time notifications and messaging system for users.</p>
+            </div>
+          </div>
+
+          <!-- API Endpoints -->
+          <div class="endpoints">
+            <h2>Available Endpoints (300+)</h2>
+            <div class="endpoint-list">
+              <!-- Auth Routes -->
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/auth/register</span
+                ><span class="endpoint-desc">User registration</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/auth/login</span
+                ><span class="endpoint-desc">User login</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/auth/logout</span
+                ><span class="endpoint-desc">User logout</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/auth/forgot-password</span
+                ><span class="endpoint-desc">Forgot password</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/auth/reset-password</span
+                ><span class="endpoint-desc">Reset password</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/auth/change-password</span
+                ><span class="endpoint-desc">Change password</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/auth/oauth/callback</span
+                ><span class="endpoint-desc">OAuth callback</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/auth/oauth</span
+                ><span class="endpoint-desc">OAuth login</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/auth/sync-user</span
+                ><span class="endpoint-desc">Sync user</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/auth/me</span
+                ><span class="endpoint-desc">Get current user</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/auth/session</span
+                ><span class="endpoint-desc">Get session</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/auth/sessions</span
+                ><span class="endpoint-desc">Get all sessions</span>
+              </div>
+
+              <!-- User Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/user</span
+                ><span class="endpoint-desc">Get all users</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/user</span
+                ><span class="endpoint-desc">Create user</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/user/:id</span
+                ><span class="endpoint-desc">Get user by ID</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/user/:id</span
+                ><span class="endpoint-desc">Update user</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/user/:id</span
+                ><span class="endpoint-desc">Delete user</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/user/me</span
+                ><span class="endpoint-desc">Get current user profile</span>
+              </div>
+              <div class="endpoint">
+                <span class="method patch">PATCH</span
+                ><span class="endpoint-path">/user/:id/status</span
+                ><span class="endpoint-desc">Update user status</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/user/sync</span
+                ><span class="endpoint-desc">Sync user data</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/user/address</span
+                ><span class="endpoint-desc">Get user addresses</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/user/address</span
+                ><span class="endpoint-desc">Create address</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/user/address/:id</span
+                ><span class="endpoint-desc">Update address</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/user/address/:id</span
+                ><span class="endpoint-desc">Delete address</span>
+              </div>
+
+              <!-- Restaurant Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/restaurant</span
+                ><span class="endpoint-desc">Get all restaurants</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/restaurant</span
+                ><span class="endpoint-desc">Create restaurant</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/restaurant/:id</span
+                ><span class="endpoint-desc">Get restaurant by ID</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/restaurant/:id</span
+                ><span class="endpoint-desc">Update restaurant</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/restaurant/:id</span
+                ><span class="endpoint-desc">Delete restaurant</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/restaurant/chain</span
+                ><span class="endpoint-desc">Get restaurant chains</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/restaurant/chain</span
+                ><span class="endpoint-desc">Create restaurant chain</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/restaurant/table</span
+                ><span class="endpoint-desc">Get tables</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/restaurant/table</span
+                ><span class="endpoint-desc">Create table</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/restaurant/table/:id</span
+                ><span class="endpoint-desc">Update table</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/restaurant/table/:id</span
+                ><span class="endpoint-desc">Delete table</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/restaurant/reservation</span
+                ><span class="endpoint-desc">Get reservations</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/restaurant/reservation</span
+                ><span class="endpoint-desc">Create reservation</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/restaurant/reservation/:id</span
+                ><span class="endpoint-desc">Update reservation</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/restaurant/reservation/:id</span
+                ><span class="endpoint-desc">Delete reservation</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/restaurant/staff/schedule</span
+                ><span class="endpoint-desc">Get staff schedules</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/restaurant/staff/schedule</span
+                ><span class="endpoint-desc">Create staff schedule</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/restaurant/staff/attendance</span
+                ><span class="endpoint-desc">Get staff attendance</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/restaurant/staff/attendance</span
+                ><span class="endpoint-desc">Record attendance</span>
+              </div>
+
+              <!-- Category Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/category</span
+                ><span class="endpoint-desc">Get categories</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/category</span
+                ><span class="endpoint-desc">Create category</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/category/:id</span
+                ><span class="endpoint-desc">Get category by ID</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/category/:id</span
+                ><span class="endpoint-desc">Update category</span>
+              </div>
+              <div class="endpoint">
+                <span class="method patch">PATCH</span
+                ><span class="endpoint-path">/category/:id</span
+                ><span class="endpoint-desc">Update category status</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/category/:id</span
+                ><span class="endpoint-desc">Delete category</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/category/tree</span
+                ><span class="endpoint-desc">Get category tree</span>
+              </div>
+
+              <!-- Menu Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/menu</span
+                ><span class="endpoint-desc">Get menus</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/menu</span
+                ><span class="endpoint-desc">Create menu</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/menu/:id</span
+                ><span class="endpoint-desc">Get menu by ID</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/menu/:id</span
+                ><span class="endpoint-desc">Update menu</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/menu/:id</span
+                ><span class="endpoint-desc">Delete menu</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/menu/item</span
+                ><span class="endpoint-desc">Get menu items</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/menu/item</span
+                ><span class="endpoint-desc">Create menu item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/menu/item/:id</span
+                ><span class="endpoint-desc">Get menu item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/menu/item/:id</span
+                ><span class="endpoint-desc">Update menu item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/menu/item/:id</span
+                ><span class="endpoint-desc">Delete menu item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/menu/recipe</span
+                ><span class="endpoint-desc">Create recipe</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/menu/recipe/:id</span
+                ><span class="endpoint-desc">Get recipe</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/menu/recipe/:id</span
+                ><span class="endpoint-desc">Update recipe</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/menu/recipe/:id</span
+                ><span class="endpoint-desc">Delete recipe</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/menu/option-groups</span
+                ><span class="endpoint-desc">Create option group</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/menu/option-groups/:id</span
+                ><span class="endpoint-desc">Delete option group</span>
+              </div>
+
+              <!-- Order Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/order</span
+                ><span class="endpoint-desc">Get orders</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/order</span
+                ><span class="endpoint-desc">Create order</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/order/:id</span
+                ><span class="endpoint-desc">Get order by ID</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/order/:id</span
+                ><span class="endpoint-desc">Update order</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/order/:id</span
+                ><span class="endpoint-desc">Delete order</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/order/item</span
+                ><span class="endpoint-desc">Get order items</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/order/item</span
+                ><span class="endpoint-desc">Create order item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/order/item/:id</span
+                ><span class="endpoint-desc">Update order item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/order/item/:id</span
+                ><span class="endpoint-desc">Delete order item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method patch">PATCH</span
+                ><span class="endpoint-path">/order/bulk-update-status</span
+                ><span class="endpoint-desc">Bulk update order status</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/order/statistics</span
+                ><span class="endpoint-desc">Get order statistics</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/order/revenue</span
+                ><span class="endpoint-desc">Get order revenue</span>
+              </div>
+
+              <!-- Payment Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/payment</span
+                ><span class="endpoint-desc">Get payments</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/payment</span
+                ><span class="endpoint-desc">Create payment</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/payment/:id</span
+                ><span class="endpoint-desc">Get payment by ID</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/payment/:id</span
+                ><span class="endpoint-desc">Update payment</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/payment/:id</span
+                ><span class="endpoint-desc">Delete payment</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/payment/intent</span
+                ><span class="endpoint-desc">Create payment intent</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/payment/intent</span
+                ><span class="endpoint-desc">Get payment intents</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/payment/refund</span
+                ><span class="endpoint-desc">Create refund</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/payment/refund</span
+                ><span class="endpoint-desc">Get refunds</span>
+              </div>
+
+              <!-- Inventory Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/inventory/item</span
+                ><span class="endpoint-desc">Get inventory items</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/inventory/item</span
+                ><span class="endpoint-desc">Create inventory item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/inventory/item/:id</span
+                ><span class="endpoint-desc">Get inventory item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/inventory/item/:id</span
+                ><span class="endpoint-desc">Update inventory item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/inventory/item/:id</span
+                ><span class="endpoint-desc">Delete inventory item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/inventory/transaction</span
+                ><span class="endpoint-desc">Create inventory transaction</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/inventory/transaction</span
+                ><span class="endpoint-desc">Get transactions</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/inventory/balance</span
+                ><span class="endpoint-desc">Create inventory balance</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/inventory/item/low-stock</span
+                ><span class="endpoint-desc">Get low stock items</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/inventory/valuation</span
+                ><span class="endpoint-desc">Get inventory valuation</span>
+              </div>
+
+              <!-- Delivery Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/delivery/staff</span
+                ><span class="endpoint-desc">Get delivery staff</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/delivery/staff</span
+                ><span class="endpoint-desc">Create delivery staff</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/delivery/deliveries</span
+                ><span class="endpoint-desc">Get deliveries</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/delivery/deliveries</span
+                ><span class="endpoint-desc">Create delivery</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/delivery/deliveries/:id</span
+                ><span class="endpoint-desc">Update delivery</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/delivery/deliveries/:id</span
+                ><span class="endpoint-desc">Delete delivery</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/delivery/zones</span
+                ><span class="endpoint-desc">Create delivery zone</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/delivery/zones</span
+                ><span class="endpoint-desc">Get delivery zones</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path"
+                  >/delivery/deliveries/statistics</span
+                ><span class="endpoint-desc">Get delivery statistics</span>
+              </div>
+
+              <!-- Feedback Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/feedback/reviews</span
+                ><span class="endpoint-desc">Get reviews</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/feedback/reviews</span
+                ><span class="endpoint-desc">Create review</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/feedback/reviews/:id</span
+                ><span class="endpoint-desc">Get review</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/feedback/reviews/:id</span
+                ><span class="endpoint-desc">Update review</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/feedback/reviews/:id</span
+                ><span class="endpoint-desc">Delete review</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/feedback/conversations</span
+                ><span class="endpoint-desc">Get conversations</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/feedback/conversations</span
+                ><span class="endpoint-desc">Create conversation</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/feedback/messages</span
+                ><span class="endpoint-desc">Get messages</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/feedback/messages</span
+                ><span class="endpoint-desc">Create message</span>
+              </div>
+
+              <!-- Finance Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/finance/tax-rates</span
+                ><span class="endpoint-desc">Get tax rates</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/finance/tax-rates</span
+                ><span class="endpoint-desc">Create tax rate</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/finance/tax-rates/:id</span
+                ><span class="endpoint-desc">Update tax rate</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/finance/tax-rates/:id</span
+                ><span class="endpoint-desc">Delete tax rate</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/finance/order-taxes</span
+                ><span class="endpoint-desc">Get order taxes</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/finance/order-taxes</span
+                ><span class="endpoint-desc">Create order tax</span>
+              </div>
+
+              <!-- Analytics Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/analytics/revenue-reports</span
+                ><span class="endpoint-desc">Get revenue reports</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/analytics/revenue-reports</span
+                ><span class="endpoint-desc">Create revenue report</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path"
+                  >/analytics/revenue-reports/:id</span
+                ><span class="endpoint-desc">Get revenue report</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path"
+                  >/analytics/revenue-reports/:id</span
+                ><span class="endpoint-desc">Update revenue report</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path"
+                  >/analytics/revenue-reports/:id</span
+                ><span class="endpoint-desc">Delete revenue report</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/analytics/kpi-metrics</span
+                ><span class="endpoint-desc">Get KPI metrics</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/analytics/kpi-metrics</span
+                ><span class="endpoint-desc">Create KPI metric</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/analytics/event-logs</span
+                ><span class="endpoint-desc">Get event logs</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/analytics/event-logs</span
+                ><span class="endpoint-desc">Create event log</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/analytics/user-statistics</span
+                ><span class="endpoint-desc">Get user statistics</span>
+              </div>
+
+              <!-- Notification Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/notification/notifications</span
+                ><span class="endpoint-desc">Get notifications</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/notification/notifications</span
+                ><span class="endpoint-desc">Create notification</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path"
+                  >/notification/notifications/:id</span
+                ><span class="endpoint-desc">Update notification</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path"
+                  >/notification/notifications/:id</span
+                ><span class="endpoint-desc">Delete notification</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path"
+                  >/notification/notifications/:id/mark-read</span
+                ><span class="endpoint-desc">Mark as read</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/notification/system-configs</span
+                ><span class="endpoint-desc">Get system configs</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/notification/system-configs</span
+                ><span class="endpoint-desc">Create system config</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/notification/audit-logs</span
+                ><span class="endpoint-desc">Get audit logs</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/notification/audit-logs</span
+                ><span class="endpoint-desc">Create audit log</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/notification/device-tokens</span
+                ><span class="endpoint-desc">Get device tokens</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/notification/device-tokens</span
+                ><span class="endpoint-desc">Create device token</span>
+              </div>
+
+              <!-- Organization Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/organization</span
+                ><span class="endpoint-desc">Get organizations</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/organization</span
+                ><span class="endpoint-desc">Create organization</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/organization/:id</span
+                ><span class="endpoint-desc">Get organization</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/organization/:id</span
+                ><span class="endpoint-desc">Update organization</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/organization/:id</span
+                ><span class="endpoint-desc">Delete organization</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/organization/memberships</span
+                ><span class="endpoint-desc">Get memberships</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/organization/memberships</span
+                ><span class="endpoint-desc">Create membership</span>
+              </div>
+
+              <!-- Marketplace Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/marketplace/cart</span
+                ><span class="endpoint-desc">Get carts</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/marketplace/cart</span
+                ><span class="endpoint-desc">Create cart</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/marketplace/cart/:id</span
+                ><span class="endpoint-desc">Get cart</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/marketplace/cart/:id</span
+                ><span class="endpoint-desc">Update cart</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/marketplace/cart/:id</span
+                ><span class="endpoint-desc">Delete cart</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/marketplace/cart/item</span
+                ><span class="endpoint-desc">Get cart items</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/marketplace/cart/item</span
+                ><span class="endpoint-desc">Create cart item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/marketplace/product/retail</span
+                ><span class="endpoint-desc">Get retail products</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/marketplace/product/retail</span
+                ><span class="endpoint-desc">Create retail product</span>
+              </div>
+
+              <!-- Promotion Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/promotion/vouchers</span
+                ><span class="endpoint-desc">Get vouchers</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/promotion/vouchers</span
+                ><span class="endpoint-desc">Create voucher</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/promotion/vouchers/:id</span
+                ><span class="endpoint-desc">Get voucher</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/promotion/vouchers/:id</span
+                ><span class="endpoint-desc">Update voucher</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/promotion/vouchers/:id</span
+                ><span class="endpoint-desc">Delete voucher</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/promotion/promotions</span
+                ><span class="endpoint-desc">Get promotions</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/promotion/promotions</span
+                ><span class="endpoint-desc">Create promotion</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/promotion/voucher-usages</span
+                ><span class="endpoint-desc">Record voucher usage</span>
+              </div>
+
+              <!-- Supply & Purchase Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/supply</span
+                ><span class="endpoint-desc">Get suppliers</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/supply</span
+                ><span class="endpoint-desc">Create supplier</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/supply/:id</span
+                ><span class="endpoint-desc">Get supplier</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/supply/:id</span
+                ><span class="endpoint-desc">Update supplier</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/supply/:id</span
+                ><span class="endpoint-desc">Delete supplier</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/supply/item</span
+                ><span class="endpoint-desc">Create supplier item</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/supply/item</span
+                ><span class="endpoint-desc">Get supplier items</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/purchase/order</span
+                ><span class="endpoint-desc">Create purchase order</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/purchase/order</span
+                ><span class="endpoint-desc">Get purchase orders</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/purchase/order/:id</span
+                ><span class="endpoint-desc">Get purchase order</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/purchase/order/:id</span
+                ><span class="endpoint-desc">Update purchase order</span>
+              </div>
+              <div class="endpoint">
+                <span class="method delete">DELETE</span
+                ><span class="endpoint-path">/purchase/order/:id</span
+                ><span class="endpoint-desc">Delete purchase order</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/purchase/order/send</span
+                ><span class="endpoint-desc">Send purchase order</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/purchase/order/confirm</span
+                ><span class="endpoint-desc">Confirm purchase order</span>
+              </div>
+              <div class="endpoint">
+                <span class="method patch">PATCH</span
+                ><span class="endpoint-path"
+                  >/purchase/order/bulk-update-status</span
+                ><span class="endpoint-desc">Bulk update PO status</span>
+              </div>
+
+              <!-- Warehouse Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/warehouse</span
+                ><span class="endpoint-desc">Get warehouses</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/warehouse</span
+                ><span class="endpoint-desc">Create warehouse</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/warehouse/:id</span
+                ><span class="endpoint-desc">Get warehouse</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/warehouse/:id</span
+                ><span class="endpoint-desc">Update warehouse</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/warehouse/transfer</span
+                ><span class="endpoint-desc">Create transfer</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/warehouse/transfer</span
+                ><span class="endpoint-desc">Get transfers</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/warehouse/receipt</span
+                ><span class="endpoint-desc">Create receipt</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/warehouse/receipt</span
+                ><span class="endpoint-desc">Get receipts</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/warehouse/issue</span
+                ><span class="endpoint-desc">Create issue</span>
+              </div>
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/warehouse/issue</span
+                ><span class="endpoint-desc">Get issues</span>
+              </div>
+
+              <!-- Upload Routes -->
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/upload</span
+                ><span class="endpoint-desc">Upload file</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/upload/multiple</span
+                ><span class="endpoint-desc">Upload multiple files</span>
+              </div>
+              <div class="endpoint">
+                <span class="method put">PUT</span
+                ><span class="endpoint-path">/upload/overwrite</span
+                ><span class="endpoint-desc">Overwrite file</span>
+              </div>
+
+              <!-- Wallet/Payment Routes -->
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/wallet/stripe</span
+                ><span class="endpoint-desc">Stripe payment</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/wallet/momo</span
+                ><span class="endpoint-desc">MoMo payment</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/wallet/zalopay</span
+                ><span class="endpoint-desc">ZaloPay payment</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/wallet/vnpay</span
+                ><span class="endpoint-desc">VNPay payment</span>
+              </div>
+              <div class="endpoint">
+                <span class="method post">POST</span
+                ><span class="endpoint-path">/wallet/paypal</span
+                ><span class="endpoint-desc">PayPal payment</span>
+              </div>
+
+              <!-- Search Routes -->
+              <div class="endpoint">
+                <span class="method get">GET</span
+                ><span class="endpoint-path">/search</span
+                ><span class="endpoint-desc">Search all resources</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container content">
+        <div class="footer-content">
+          <div class="footer-left">
+            Bản quyền © Gorth Inc. 2020 - 2026 Bảo lưu mọi quyền.
+          </div>
+          <div class="footer-links">
+            <a href="#">Chính sách bảo mật</a>
+            <a href="#">Điều khoản sử dụng</a>
+            <a href="#">Chính sách cookie</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement;
+        const button = document.querySelector(".theme-toggle");
+
+        if (
+          html.style.colorScheme === "dark" ||
+          html.classList?.contains("dark")
+        ) {
+          html.style.colorScheme = "light";
+          button.textContent = "🌙 Dark";
+          localStorage.setItem("theme", "light");
+        } else {
+          html.style.colorScheme = "dark";
+          button.textContent = "☀️ Light";
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // Load saved theme preference
+      window.addEventListener("DOMContentLoaded", function () {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        const button = document.querySelector(".theme-toggle");
+        if (savedTheme === "dark") {
+          document.documentElement.style.colorScheme = "dark";
+          button.textContent = "☀️ Light";
+        } else {
+          document.documentElement.style.colorScheme = "light";
+          button.textContent = "🌙 Dark";
+        }
+      });
+    </script>
+  </body>
+</html>

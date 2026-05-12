@@ -1,11 +1,11 @@
 "use client"
 
-import { Video } from "@/components/video"
+import { VideoPlaceHolder } from "@/components/video"
 
 export default function Page() {
   return (
     <>
-      <Video
+      <VideoPlaceHolder
         // className="w-96"
         layout="side"
         size="md"
@@ -20,7 +20,7 @@ export default function Page() {
         }}
         channel={{
           name: "Channel Name",
-          slug: "channel-name",
+          handle: "channel-name",
           avatar: "/logo/icon.png",
         }}
       />
